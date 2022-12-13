@@ -31,6 +31,9 @@
                     <span>Sekunden</span>
                 </div>
             </div>
+            <p>
+                Enden am: <span id="end"></span>
+            </p>
             <button type="button"><a href="https://xip0enix.github.io/index.html">zurück</a></button>
         </div>
         <div class="bubbles">
@@ -85,30 +88,9 @@
         </div>
     </div>
 
-    <script>
-        var countDownDate = new Date ("Oct 14, 2022 13:05:00").getTime();
-        var x = setInterval(function(){
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-
-            if(distance < 0){
-                clearInterval(x);
-                document.getElementById("days").innerHTML = 00;
-            document.getElementById("hours").innerHTML = 00;
-            document.getElementById("minutes").innerHTML = 00;
-            document.getElementById("seconds").innerHTML = 00;
-            }
-        },1000);
-    </script>
+    <script type="module" src="main.js"></script>
+	<script src="main.js"></script>
+    
 </body>
 </html>
